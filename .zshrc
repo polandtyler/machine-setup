@@ -2,14 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/a664291/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 DEFAULT_USER=""
 prompt_context(){ }
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="gallois"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,11 +48,6 @@ ZSH_THEME="agnoster"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
-# to source the file to update your current session):
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -97,10 +92,6 @@ alias clone="git clone"
 ## VIM
 alias vimreload="source ~/.vimrc"
 
-## NAVIGATION
-alias mcweb="cd ~/Development/work/mc-web"
-alias personal="cd ~/Development/personal_learning/learning"
-
 ## DOCKER
 alias dockerClean="docker rmi $(docker images | grep "^<none>" | awk "{print $3}")"
 # Stop all containers
@@ -120,3 +111,10 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)"
   fi
 }
+
+# FUNSIES
+alias chrome="cd / && open Applications/Google\ Chrome.app && cd ~"
+alias safari="cd / && open Applications/Safari.app && cd ~"
+alias tower="cd / && open Applications/Tower.app && cd ~"
+alias spotify="cd / && open Applications/Spotify.app && cd ~"
+alias xcode="cd / && open Applications/xcode.app && cd ~"
